@@ -1,0 +1,26 @@
+{% extends "accounts/account/base.html" %}
+
+{% block title %}
+<title>Signup</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="w-50 m-4  p-2">
+    <h1>Create an account @ <span style="color: #7d3cff;">projet</span></h1>
+    <p>Please, Fill this following form:</p>
+    <form method="post" class="">
+        {{form.as_p }}
+        {% csrf_token %}
+        <div class="btn btn-primary  btn-md rounded-0 ">
+        <input type="submit" value="Create Account " class="btn text-white ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>
+        </div>
+    </form>
+</div>
+
+
+{% endblock content %}
